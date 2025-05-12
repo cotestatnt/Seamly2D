@@ -69,7 +69,6 @@
 #include "../vwidgets/vabstractmainwindow.h"
 #include "../vwidgets/vmaingraphicsscene.h"
 #include "../vwidgets/vmaingraphicsview.h"
-#include "../vtools/undocommands/addgroup.h"
 #include "../vtools/undocommands/add_groupitem.h"
 #include "../vtools/undocommands/remove_groupitem.h"
 
@@ -319,7 +318,7 @@ void VDrawTool::ContextMenu(QGraphicsSceneContextMenuEvent *event, quint32 itemI
     if (selectedAction == actionOption)
     {
         qCDebug(vTool, "Show options.");
-        qApp->getSceneView()->itemClicked(nullptr);
+        emit qApp->getSceneView()->itemClicked(nullptr);
         m_dialog = QSharedPointer<Dialog>(new Dialog(getData(), m_id, qApp->getMainWindow()));
         m_dialog->setModal(true);
 
@@ -356,8 +355,8 @@ void VDrawTool::ContextMenu(QGraphicsSceneContextMenuEvent *event, quint32 itemI
                             data.GeometricObject<VPointF>(doc->GetParametrUInt(domElement, AttrFirstPoint, "0"))->name() +
                             "_"+
                             data.GeometricObject<VPointF>(doc->GetParametrUInt(domElement, AttrSecondPoint, "0"))->name();
-                    break;
                 }
+                break;
             }
             case Tool::Arc:
             case Tool::ArcWithLength:
@@ -444,6 +443,8 @@ void VDrawTool::ContextMenu(QGraphicsSceneContextMenuEvent *event, quint32 itemI
                 text = obj->name();
                 break;
             }
+            default:
+                break;
         }
 
         QClipboard *clipboard = QApplication::clipboard();
@@ -481,8 +482,8 @@ void VDrawTool::ContextMenu(QGraphicsSceneContextMenuEvent *event, quint32 itemI
                             data.GeometricObject<VPointF>(doc->GetParametrUInt(domElement, AttrFirstPoint, "0"))->name() +
                             "_"+
                             data.GeometricObject<VPointF>(doc->GetParametrUInt(domElement, AttrSecondPoint, "0"))->name();
-                    break;
                 }
+                break;
             }
             case Tool::AlongLine:
             case Tool::Normal:
@@ -493,8 +494,8 @@ void VDrawTool::ContextMenu(QGraphicsSceneContextMenuEvent *event, quint32 itemI
                     angleName = tr("AngleLine_") +
                     data.GeometricObject<VPointF>(doc->GetParametrUInt(domElement, AttrFirstPoint, "0"))->name() +
                     "_" +  data.GeometricObject<VPointF>(doc->GetParametrUInt(domElement, "id", "0"))->name();
-                    break;
                 }
+                break;
             }
             case Tool::Bisector:
             {
@@ -503,9 +504,9 @@ void VDrawTool::ContextMenu(QGraphicsSceneContextMenuEvent *event, quint32 itemI
                 {
                     angleName = tr("AngleLine_") +
                     data.GeometricObject<VPointF>(doc->GetParametrUInt(domElement, AttrSecondPoint, "0"))->name() +
-                    "_" +  data.GeometricObject<VPointF>(doc->GetParametrUInt(domElement, "id", "0"))->name();
-                    break;
+                    "_" +  data.GeometricObject<VPointF>(doc->GetParametrUInt(domElement, "id", "0"))->name();  
                 }
+                break;
             }
             case Tool::EndLine:
             case Tool::Height:
@@ -518,9 +519,11 @@ void VDrawTool::ContextMenu(QGraphicsSceneContextMenuEvent *event, quint32 itemI
                     angleName = tr("AngleLine_") +
                     data.GeometricObject<VPointF>(doc->GetParametrUInt(domElement, AttrBasePoint, "0"))->name() +
                     "_" +  data.GeometricObject<VPointF>(doc->GetParametrUInt(domElement, "id", "0"))->name();
-                    break;
                 }
+                break;
             }
+            default:
+                break;
         }
         QClipboard *clipboard = QApplication::clipboard();
         clipboard->setText(angleName);

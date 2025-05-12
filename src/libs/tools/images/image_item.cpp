@@ -571,6 +571,7 @@ void ImageItem::keyReleaseEvent(QKeyEvent *event)
             {
                 emit deleteImage(m_image.id);
             }
+            break;
         case Qt::Key_Escape:
             if (m_selectNewOrigin)
             {
@@ -579,6 +580,7 @@ void ImageItem::keyReleaseEvent(QKeyEvent *event)
                 SetItemOverrideCursor(this, cursorArrowOpenHand, 1, 1);
                 m_resizeHandles->show();
             }
+            break;
         default:
             break;
     }

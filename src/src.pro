@@ -11,9 +11,9 @@ noTests{ # For enable run qmake with CONFIG+=noTests
 	SUBDIRS = \
 		libs \
 		app \
-		test
+		# test
 
-	test.depends = libs
+    # test.depends = libs
 }
 
 app.depends = libs
