@@ -165,12 +165,15 @@ About2DAppDialog::About2DAppDialog(QWidget *parent)
     switch(sysloc.textDirection())
     {
         case Qt::LeftToRight:
-    	   direction = tr("Left to right");
+            direction = tr("Left to right");
+            break;
         case Qt::RightToLeft:
-           direction = tr("Right to left");
+            direction = tr("Right to left");
+            break;
         case Qt::LayoutDirectionAuto:
         default:
-           direction = tr("Automatic");
+            direction = tr("Automatic");
+            break;
     }
 
     ui->sysLocalDirection_value->setText(direction);

@@ -403,7 +403,7 @@ void ShortcutsDialog::sendToPrinter()
 void ShortcutsDialog::exportPdf()
 {
     QString filename = QFileDialog::getSaveFileName(nullptr, tr("Export PDF"), QString(),
-                                                    "*.pdf", nullptr, QFileDialog::DontUseNativeDialog);
+                                                    "*.pdf", nullptr, nullptr);
 
     if (QFileInfo(filename).suffix().isEmpty())
     {

@@ -170,7 +170,7 @@ void LineWeightComboBox::setLineWeight(const qreal &weight)
 
     int index = findData(weight);
 
-    if (index = -1)
+    if (index == -1)
     {
         index = 6;
     }

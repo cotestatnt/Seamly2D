@@ -50,21 +50,11 @@
 
 #include "pattern_piece_tool.h"
 
-#include "nodeDetails/vnodearc.h"
-#include "nodeDetails/vnodeellipticalarc.h"
 #include "nodeDetails/vnodepoint.h"
-#include "nodeDetails/vnodespline.h"
-#include "nodeDetails/vnodesplinepath.h"
 #include "nodeDetails/internal_path_tool.h"
 #include "../dialogs/tools/piece/pattern_piece_dialog.h"
 #include "../ifc/xml/vpatternconverter.h"
-#include "../vgeometry/varc.h"
-#include "../vgeometry/vellipticalarc.h"
-#include "../vgeometry/vcubicbezier.h"
-#include "../vgeometry/vcubicbezierpath.h"
 #include "../vgeometry/vpointf.h"
-#include "../vgeometry/vspline.h"
-#include "../vgeometry/vsplinepath.h"
 #include "../vpatterndb/vpiecenode.h"
 #include "../vpatterndb/vpiecepath.h"
 #include "../vpatterndb/calculator.h"
@@ -630,7 +620,7 @@ void PatternPieceTool::updatePieceLabel()
     qDebug() << "Update Piece label: " << piece.GetName();
     const VPieceLabelData &labelData = piece.GetPatternPieceData();
 
-    if (labelData.IsVisible() & qApp->Settings()->showLabels())
+    if (labelData.IsVisible() && qApp->Settings()->showLabels())
     {
         QPointF pos;
         qreal labelAngle = 0;
@@ -656,7 +646,7 @@ void PatternPieceTool::updatePatternLabel()
     qDebug() << "Update Pattern label: " << piece.GetName();
     const VPatternLabelData &data = piece.GetPatternInfo();
 
-    if (data.IsVisible() & qApp->Settings()->showLabels())
+    if (data.IsVisible() && qApp->Settings()->showLabels())
     {
         QPointF pos;
         qreal labelAngle = 0;
@@ -683,7 +673,7 @@ void PatternPieceTool::updateGrainline()
 
     qDebug() << "Update Grainline IsVisible() = " << data.IsVisible();
 
-    if (data.IsVisible() & qApp->Settings()->showGrainlines())
+    if (data.IsVisible() && qApp->Settings()->showGrainlines())
     {
         QPointF pos;
         qreal dRotation = 0;
@@ -1031,8 +1021,8 @@ QVariant PatternPieceTool::itemChange(QGraphicsItem::GraphicsItemChange change, 
                 if (VMainGraphicsView *view = qobject_cast<VMainGraphicsView *>(viewList.at(0)))
                 {
                     const qreal scale = sceneScale(scene());
-                    const QRectF viewRect = VMainGraphicsView::SceneVisibleArea(view);
-                    const QRectF itemRect = mapToScene(boundingRect()|childrenBoundingRect()).boundingRect();
+                    // const QRectF viewRect = VMainGraphicsView::SceneVisibleArea(view);
+                    // const QRectF itemRect = mapToScene(boundingRect()|childrenBoundingRect()).boundingRect();
 
                     // Ensure visible only small rect around a cursor
                     VMainGraphicsScene *currentScene = qobject_cast<VMainGraphicsScene *>(scene());
