@@ -320,8 +320,7 @@ void EditLabelTemplateDialog::ExportTemplate()
     }
 
     QString fileName = QFileDialog::getSaveFileName(this, tr("Export label template"),
-                                                    dir + QLatin1String("/") + tr("template") + QLatin1String(".xml"),
-                                                    filters, nullptr, nullptr);
+                                                    dir + QLatin1String("/") + tr("template") + QLatin1String(".xml"), filters);
 
     auto RemoveTempDir = [usedNotExistedDir, dir]()
     {
@@ -380,8 +379,7 @@ void EditLabelTemplateDialog::ImportTemplate()
     }
 
     QString filter(tr("Label template") + QLatin1String("(*.xml)"));
-    const QString fileName = QFileDialog::getOpenFileName(this, tr("Import template"),
-                                                          qApp->Settings()->getLabelTemplatePath(), filter, nullptr, nullptr);
+    const QString fileName = QFileDialog::getOpenFileName(this, tr("Import template"), qApp->Settings()->getLabelTemplatePath(), filter);
     if (fileName.isEmpty())
     {
         return;

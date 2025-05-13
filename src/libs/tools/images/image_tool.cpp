@@ -70,7 +70,7 @@ QString getImageFilename(QWidget *parent)
     //     usedNotExistedDir = directory.mkpath(".");
     // }
 
-    const QString filename = QFileDialog::getOpenFileName(parent, QObject::tr("Open Image File"), path, filter, nullptr, nullptr);
+    const QString filename = QFileDialog::getOpenFileName(parent, QObject::tr("Open Image File"), path, filter);
 
     return filename;
 }

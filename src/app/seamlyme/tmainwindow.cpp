@@ -518,8 +518,17 @@ void TMainWindow::CreateFromExisting()
 		usedNotExistedDir = directory.mkpath(".");
 	}
 
-    const QString filename = fileDialog(this, tr("Select file"), dir, filter, nullptr, nullptr,
-                                        QFileDialog::ExistingFile, QFileDialog::AcceptOpen);
+    // fileDialog(QWidget *parent, const QString &title,  const QString &dir, const QString &filter,
+    //            QString *selectedFilter, QFileDialog::Options options, QFileDialog::FileMode mode,
+    //            QFileDialog::AcceptMode accept)
+
+    QFileDialog::Options options;
+
+    const QString filename = fileDialog(this, tr("Select file"), dir, filter,
+                                        nullptr,
+                                        options,
+                                        QFileDialog::ExistingFile,
+                                        QFileDialog::AcceptOpen);
 
 	if (!filename.isEmpty())
 	{
@@ -845,26 +854,26 @@ void TMainWindow::handleExportToCSV()
 //---------------------------------------------------------------------------------------------------------------------
 void TMainWindow::print()
 {
-    int width = 0;
-    int height = 0;
-    int columns;
-    if (mType == MeasurementsType::Multisize)
-    {
-        columns = ui->tableWidget->columnCount();
-    }
-    else
-    {
-        columns = 5;
-    }
-    int rows = ui->tableWidget->rowCount();
+    // int width = 0;
+    // int height = 0;
+    // int columns;
+    // if (mType == MeasurementsType::Multisize)
+    // {
+    //     columns = ui->tableWidget->columnCount();
+    // }
+    // else
+    // {
+    //     columns = 5;
+    // }
+    // int rows = ui->tableWidget->rowCount();
 
-    for( int i = 0; i < columns; ++i ) {
-            width += ui->tableWidget->columnWidth(i);
-    }
+    // for( int i = 0; i < columns; ++i ) {
+    //         width += ui->tableWidget->columnWidth(i);
+    // }
 
-    for( int i = 0; i < rows; ++i ) {
-        height += ui->tableWidget->rowHeight(i);
-    }
+    // for( int i = 0; i < rows; ++i ) {
+    //     height += ui->tableWidget->rowHeight(i);
+    // }
 
     QPrintPreviewDialog  *dialog = new QPrintPreviewDialog(this);
     connect(dialog, &QPrintPreviewDialog::paintRequested, this, &TMainWindow::printPages);
@@ -1131,8 +1140,9 @@ bool TMainWindow::FileSaveAs()
 		usedNotExistedDir = directory.mkpath(".");
 	}
 
+    QFileDialog::Options options;
     fileName = fileDialog(this, tr("Save as"), dir + QLatin1String("/") + fileName,
-                                        filters, nullptr, nullptr,
+                                        filters, nullptr, options,
                                         QFileDialog::AnyFile, QFileDialog::AcceptSave);
 
 	auto RemoveTempDir = [usedNotExistedDir, dir]()
@@ -1642,8 +1652,9 @@ void TMainWindow::ImportFromPattern()
 	QString dir = qApp->seamlyMeSettings()->getTemplatePath();
 	dir = VCommonSettings::PrepareStandardTemplates(dir);
 
+    QFileDialog::Options options;
     const QString filename = fileDialog(this, tr("Import from a pattern"), dir, filter, nullptr,
-                                        nullptr, QFileDialog::ExistingFile, QFileDialog::AcceptOpen);
+                                        options, QFileDialog::ExistingFile, QFileDialog::AcceptOpen);
 
 	if (filename.isEmpty())
 	{
@@ -2977,7 +2988,8 @@ bool TMainWindow::EvalFormula(const QString &formula, bool fromUser, VContainer 
 //---------------------------------------------------------------------------------------------------------------------
 void TMainWindow::Open(const QString &dir, const QString &filter)
 {
-    const QString filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, nullptr,
+    QFileDialog::Options options;
+    const QString filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, options,
                                         QFileDialog::ExistingFile, QFileDialog::AcceptOpen);
 
 	if (!filename.isEmpty())
