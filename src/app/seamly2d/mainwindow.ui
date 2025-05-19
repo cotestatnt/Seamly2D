@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>1100</width>
-    <height>809</height>
+    <height>782</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -64,7 +64,7 @@
      <x>0</x>
      <y>0</y>
      <width>1100</width>
-     <height>22</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="file_Menu">
@@ -196,7 +196,7 @@
       <string>&amp;Operations</string>
      </property>
      <property name="icon">
-      <iconset resource="share/resources/toolicon.qrc">
+      <iconset>
        <normaloff>:/toolicon/32x32/operations_toolbox.png</normaloff>:/toolicon/32x32/operations_toolbox.png</iconset>
      </property>
      <addaction name="group_Action"/>
@@ -212,7 +212,7 @@
       <string>Point</string>
      </property>
      <property name="icon">
-      <iconset resource="share/resources/toolicon.qrc">
+      <iconset>
        <normaloff>:/toolicon/32x32/points_toolbox.png</normaloff>:/toolicon/32x32/points_toolbox.png</iconset>
      </property>
      <addaction name="pointAtDistanceAngle_Action"/>
@@ -232,7 +232,7 @@
       <string>Details</string>
      </property>
      <property name="icon">
-      <iconset resource="share/resources/toolicon.qrc">
+      <iconset>
        <normaloff>:/toolicon/32x32/details_toolbox.png</normaloff>:/toolicon/32x32/details_toolbox.png</iconset>
      </property>
      <addaction name="union_Action"/>
@@ -243,7 +243,7 @@
       <string>Line</string>
      </property>
      <property name="icon">
-      <iconset resource="share/resources/toolicon.qrc">
+      <iconset>
        <normaloff>:/toolicon/32x32/lines_toolbox.png</normaloff>:/toolicon/32x32/lines_toolbox.png</iconset>
      </property>
      <addaction name="lineTool_Action"/>
@@ -254,7 +254,7 @@
       <string>Curve</string>
      </property>
      <property name="icon">
-      <iconset resource="share/resources/toolicon.qrc">
+      <iconset>
        <normaloff>:/toolicon/32x32/spline_toolboxs.png</normaloff>:/toolicon/32x32/spline_toolboxs.png</iconset>
      </property>
      <addaction name="curve_Action"/>
@@ -271,7 +271,7 @@
       <string>Arc</string>
      </property>
      <property name="icon">
-      <iconset resource="share/resources/toolicon.qrc">
+      <iconset>
        <normaloff>:/toolicon/32x32/arcs_toolbox.png</normaloff>:/toolicon/32x32/arcs_toolbox.png</iconset>
      </property>
      <addaction name="arcTool_Action"/>
@@ -289,7 +289,7 @@
       <string>Piece</string>
      </property>
      <property name="icon">
-      <iconset resource="share/resources/toolicon.qrc">
+      <iconset>
        <normaloff>:/toolicon/32x32/patternpiece_toolbox.png</normaloff>:/toolicon/32x32/patternpiece_toolbox.png</iconset>
      </property>
      <addaction name="addPiece_Action"/>
@@ -305,7 +305,7 @@
       <string>Layout</string>
      </property>
      <property name="icon">
-      <iconset resource="share/resources/toolicon.qrc">
+      <iconset>
        <normaloff>:/toolicon/32x32/layout_toolbox.png</normaloff>:/toolicon/32x32/layout_toolbox.png</iconset>
      </property>
      <addaction name="newPrintLayout_Action"/>
@@ -316,7 +316,7 @@
       <string>Images</string>
      </property>
      <property name="icon">
-      <iconset resource="share/resources/toolicon.qrc">
+      <iconset>
        <normaloff>:/toolicon/32x32/image_menu_icon.png</normaloff>:/toolicon/32x32/image_menu_icon.png</iconset>
      </property>
      <addaction name="importImage_Action"/>
@@ -566,7 +566,17 @@
    </attribute>
    <widget class="QWidget" name="dockWidgetContents_2"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+  </widget>
   <widget class="QToolBar" name="zoom_ToolBar">
    <property name="enabled">
     <bool>true</bool>
@@ -868,7 +878,7 @@
           </size>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="draftMode_Page">
           <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -904,7 +914,7 @@
               <string/>
              </property>
              <property name="currentIndex">
-              <number>5</number>
+              <number>4</number>
              </property>
              <property name="tabSpacing">
               <number>4</number>
@@ -914,8 +924,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>128</width>
-                <height>288</height>
+                <width>118</width>
+                <height>294</height>
                </rect>
               </property>
               <property name="sizePolicy">
@@ -940,7 +950,7 @@
                <string>Tools for creating points.</string>
               </property>
               <attribute name="icon">
-               <iconset resource="share/resources/toolicon.qrc">
+               <iconset>
                 <normaloff>:/toolicon/32x32/points_toolbox.png</normaloff>:/toolicon/32x32/points_toolbox.png</iconset>
               </attribute>
               <attribute name="label">
@@ -980,7 +990,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/bisector.png</normaloff>:/toolicon/32x32/bisector.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1006,7 +1016,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/shoulder.png</normaloff>:/toolicon/32x32/shoulder.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1032,7 +1042,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/point_intersect_arc_line.png</normaloff>:/toolicon/32x32/point_intersect_arc_line.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1058,7 +1068,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/triangle.png</normaloff>:/toolicon/32x32/triangle.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1084,7 +1094,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/point_intersectxy_icon.png</normaloff>:/toolicon/32x32/point_intersectxy_icon.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1110,7 +1120,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/height.png</normaloff>:/toolicon/32x32/height.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1136,7 +1146,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/line_intersect_axis.png</normaloff>:/toolicon/32x32/line_intersect_axis.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1162,7 +1172,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/normal.png</normaloff>:/toolicon/32x32/normal.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1188,7 +1198,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/segment.png</normaloff>:/toolicon/32x32/segment.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1214,7 +1224,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/along_line.png</normaloff>:/toolicon/32x32/along_line.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1240,7 +1250,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/midpoint.png</normaloff>:/toolicon/32x32/midpoint.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1261,8 +1271,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>128</width>
-                <height>58</height>
+                <width>102</width>
+                <height>59</height>
                </rect>
               </property>
               <property name="sizePolicy">
@@ -1275,7 +1285,7 @@
                <string>Tools for creating lines.</string>
               </property>
               <attribute name="icon">
-               <iconset resource="share/resources/toolicon.qrc">
+               <iconset>
                 <normaloff>:/toolicon/32x32/lines_toolbox.png</normaloff>:/toolicon/32x32/lines_toolbox.png</iconset>
               </attribute>
               <attribute name="label">
@@ -1312,7 +1322,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/line.png</normaloff>:/toolicon/32x32/line.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1338,7 +1348,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/intersect.png</normaloff>:/toolicon/32x32/intersect.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1359,8 +1369,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>128</width>
-                <height>196</height>
+                <width>118</width>
+                <height>200</height>
                </rect>
               </property>
               <property name="sizePolicy">
@@ -1379,7 +1389,7 @@
                <string>Tools for creating curves.</string>
               </property>
               <attribute name="icon">
-               <iconset resource="share/resources/toolicon.qrc">
+               <iconset>
                 <normaloff>:/toolicon/32x32/spline_toolboxs.png</normaloff>:/toolicon/32x32/spline_toolboxs.png</iconset>
               </attribute>
               <attribute name="label">
@@ -1416,7 +1426,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/spline.png</normaloff>:/toolicon/32x32/spline.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1442,7 +1452,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/splinePath.png</normaloff>:/toolicon/32x32/splinePath.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1468,7 +1478,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/cubic_bezier.png</normaloff>:/toolicon/32x32/cubic_bezier.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1494,7 +1504,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/cubic_bezier_path.png</normaloff>:/toolicon/32x32/cubic_bezier_path.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1520,7 +1530,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/splinePath_cut_point.png</normaloff>:/toolicon/32x32/splinePath_cut_point.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1546,7 +1556,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/intersection_curves.png</normaloff>:/toolicon/32x32/intersection_curves.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1572,7 +1582,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/curve_intersect_axis.png</normaloff>:/toolicon/32x32/curve_intersect_axis.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1598,7 +1608,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/spline_cut_point.png</normaloff>:/toolicon/32x32/spline_cut_point.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1619,8 +1629,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>128</width>
-                <height>226</height>
+                <width>102</width>
+                <height>231</height>
                </rect>
               </property>
               <property name="sizePolicy">
@@ -1633,7 +1643,7 @@
                <string>Tools for creating arcs.</string>
               </property>
               <attribute name="icon">
-               <iconset resource="share/resources/toolicon.qrc">
+               <iconset>
                 <normaloff>:/toolicon/32x32/arcs_toolbox.png</normaloff>:/toolicon/32x32/arcs_toolbox.png</iconset>
               </attribute>
               <attribute name="label">
@@ -1670,7 +1680,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/arc.png</normaloff>:/toolicon/32x32/arc.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1696,7 +1706,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/arc_cut.png</normaloff>:/toolicon/32x32/arc_cut.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1722,7 +1732,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/arc_intersect_axis.png</normaloff>:/toolicon/32x32/arc_intersect_axis.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1748,7 +1758,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/point_of_intersection_arcs.png</normaloff>:/toolicon/32x32/point_of_intersection_arcs.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1774,7 +1784,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/point_of_intersection_circles.png</normaloff>:/toolicon/32x32/point_of_intersection_circles.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1800,7 +1810,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/point_from_circle_and_tangent.png</normaloff>:/toolicon/32x32/point_from_circle_and_tangent.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1826,7 +1836,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/point_from_arc_and_tangent.png</normaloff>:/toolicon/32x32/point_from_arc_and_tangent.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1852,7 +1862,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/arc_with_length.png</normaloff>:/toolicon/32x32/arc_with_length.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1878,7 +1888,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/el_arc.png</normaloff>:/toolicon/32x32/el_arc.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1899,15 +1909,15 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>128</width>
-                <height>180</height>
+                <width>108</width>
+                <height>184</height>
                </rect>
               </property>
               <property name="toolTip">
                <string>Tools for performing operations on objects</string>
               </property>
               <attribute name="icon">
-               <iconset resource="share/resources/toolicon.qrc">
+               <iconset>
                 <normaloff>:/toolicon/32x32/operations_toolbox.png</normaloff>:/toolicon/32x32/operations_toolbox.png</iconset>
               </attribute>
               <attribute name="label">
@@ -1944,7 +1954,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/group.png</normaloff>:/toolicon/32x32/group.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1970,7 +1980,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/rotation.png</normaloff>:/toolicon/32x32/rotation.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -1996,7 +2006,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/mirror_by_line.png</normaloff>:/toolicon/32x32/mirror_by_line.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -2022,7 +2032,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/mirror_by_axis.png</normaloff>:/toolicon/32x32/mirror_by_axis.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -2048,7 +2058,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/move.png</normaloff>:/toolicon/32x32/move.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -2074,7 +2084,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/true_darts.png</normaloff>:/toolicon/32x32/true_darts.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -2100,7 +2110,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/export.png</normaloff>:/toolicon/32x32/export.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -2121,8 +2131,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>128</width>
-                <height>96</height>
+                <width>102</width>
+                <height>98</height>
                </rect>
               </property>
               <property name="sizePolicy">
@@ -2135,7 +2145,7 @@
                <string>Tools for adding pattern pieces.</string>
               </property>
               <attribute name="icon">
-               <iconset resource="share/resources/toolicon.qrc">
+               <iconset>
                 <normaloff>:/toolicon/32x32/patternpiece_toolbox.png</normaloff>:/toolicon/32x32/patternpiece_toolbox.png</iconset>
               </attribute>
               <attribute name="label">
@@ -2172,7 +2182,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/new_piece.png</normaloff>:/toolicon/32x32/new_piece.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -2224,7 +2234,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/insert_nodes_icon.png</normaloff>:/toolicon/32x32/insert_nodes_icon.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -2250,7 +2260,7 @@
                   <string notr="true">...</string>
                  </property>
                  <property name="icon">
-                  <iconset resource="share/resources/toolicon.qrc">
+                  <iconset>
                    <normaloff>:/toolicon/32x32/path.png</normaloff>:/toolicon/32x32/path.png</iconset>
                  </property>
                  <property name="iconSize">
@@ -2271,8 +2281,8 @@
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>128</width>
-                <height>56</height>
+                <width>84</width>
+                <height>59</height>
                </rect>
               </property>
               <property name="sizePolicy">
@@ -2285,7 +2295,7 @@
                <string>Tools for inserting or modifying images.</string>
               </property>
               <attribute name="icon">
-               <iconset resource="share/resources/toolicon.qrc">
+               <iconset>
                 <normaloff>:/toolicon/32x32/image_menu_icon.png</normaloff>:/toolicon/32x32/image_menu_icon.png</iconset>
               </attribute>
               <attribute name="label">
@@ -2378,14 +2388,14 @@
               <x>0</x>
               <y>0</y>
               <width>120</width>
-              <height>82</height>
+              <height>79</height>
              </rect>
             </property>
             <property name="toolTip">
              <string>Tools for adding details to pattern pieces</string>
             </property>
             <attribute name="icon">
-             <iconset resource="share/resources/toolicon.qrc">
+             <iconset>
               <normaloff>:/toolicon/32x32/details_toolbox.png</normaloff>:/toolicon/32x32/details_toolbox.png</iconset>
             </attribute>
             <attribute name="label">
@@ -2413,7 +2423,7 @@
               <string notr="true">...</string>
              </property>
              <property name="icon">
-              <iconset resource="share/resources/toolicon.qrc">
+              <iconset>
                <normaloff>:/toolicon/32x32/union.png</normaloff>:/toolicon/32x32/union.png</iconset>
              </property>
              <property name="iconSize">
@@ -2445,7 +2455,7 @@
               <string notr="true">...</string>
              </property>
              <property name="icon">
-              <iconset resource="share/resources/toolicon.qrc">
+              <iconset>
                <normaloff>:/toolicon/32x32/export.png</normaloff>:/toolicon/32x32/export.png</iconset>
              </property>
              <property name="iconSize">
@@ -2471,7 +2481,7 @@
              <x>0</x>
              <y>0</y>
              <width>120</width>
-             <height>111</height>
+             <height>161</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -2512,11 +2522,11 @@
               <x>0</x>
               <y>0</y>
               <width>120</width>
-              <height>82</height>
+              <height>129</height>
              </rect>
             </property>
             <attribute name="icon">
-             <iconset resource="share/resources/toolicon.qrc">
+             <iconset>
               <normaloff>:/toolicon/32x32/layout_toolbox.png</normaloff>:/toolicon/32x32/layout_toolbox.png</iconset>
             </attribute>
             <attribute name="label">
@@ -2556,7 +2566,7 @@
                 <string>Settings</string>
                </property>
                <property name="icon">
-                <iconset resource="share/resources/toolicon.qrc">
+                <iconset>
                  <normaloff>:/toolicon/32x32/layout_settings.png</normaloff>:/toolicon/32x32/layout_settings.png</iconset>
                </property>
                <property name="iconSize">
@@ -2582,7 +2592,7 @@
                 <string notr="true">...</string>
                </property>
                <property name="icon">
-                <iconset resource="share/resources/toolicon.qrc">
+                <iconset>
                  <normaloff>:/toolicon/32x32/export.png</normaloff>:/toolicon/32x32/export.png</iconset>
                </property>
                <property name="iconSize">
@@ -2593,6 +2603,23 @@
                </property>
                <property name="checkable">
                 <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QToolButton" name="printPreview_toolButton">
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="icon">
+                <iconset resource="../../libs/vmisc/share/resources/theme.qrc">
+                 <normaloff>:/icons/win.icon.theme/32x32/actions/document-print-preview.png</normaloff>:/icons/win.icon.theme/32x32/actions/document-print-preview.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
                </property>
               </widget>
              </item>
@@ -2698,8 +2725,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-save-as">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-save-as"/>
    </property>
    <property name="text">
     <string>Save &amp;As...</string>
@@ -2905,7 +2931,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/group.png</normaloff>:/toolicon/32x32/group.png</iconset>
    </property>
    <property name="text">
@@ -2923,7 +2949,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/rotation.png</normaloff>:/toolicon/32x32/rotation.png</iconset>
    </property>
    <property name="text">
@@ -2944,7 +2970,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/mirror_by_line.png</normaloff>:/toolicon/32x32/mirror_by_line.png</iconset>
    </property>
    <property name="text">
@@ -2962,7 +2988,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/mirror_by_axis.png</normaloff>:/toolicon/32x32/mirror_by_axis.png</iconset>
    </property>
    <property name="text">
@@ -2980,7 +3006,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/move.png</normaloff>:/toolicon/32x32/move.png</iconset>
    </property>
    <property name="text">
@@ -2998,7 +3024,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/true_darts.png</normaloff>:/toolicon/32x32/true_darts.png</iconset>
    </property>
    <property name="text">
@@ -3016,7 +3042,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/el_arc.png</normaloff>:/toolicon/32x32/el_arc.png</iconset>
    </property>
    <property name="text">
@@ -3037,7 +3063,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/midpoint.png</normaloff>:/toolicon/32x32/midpoint.png</iconset>
    </property>
    <property name="text">
@@ -3055,7 +3081,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/along_line.png</normaloff>:/toolicon/32x32/along_line.png</iconset>
    </property>
    <property name="text">
@@ -3073,7 +3099,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/segment.png</normaloff>:/toolicon/32x32/segment.png</iconset>
    </property>
    <property name="text">
@@ -3094,7 +3120,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/normal.png</normaloff>:/toolicon/32x32/normal.png</iconset>
    </property>
    <property name="text">
@@ -3112,7 +3138,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/bisector.png</normaloff>:/toolicon/32x32/bisector.png</iconset>
    </property>
    <property name="text">
@@ -3130,7 +3156,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/shoulder.png</normaloff>:/toolicon/32x32/shoulder.png</iconset>
    </property>
    <property name="text">
@@ -3148,7 +3174,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/point_intersect_arc_line.png</normaloff>:/toolicon/32x32/point_intersect_arc_line.png</iconset>
    </property>
    <property name="text">
@@ -3166,7 +3192,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/triangle.png</normaloff>:/toolicon/32x32/triangle.png</iconset>
    </property>
    <property name="text">
@@ -3184,7 +3210,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/point_intersectxy_icon.png</normaloff>:/toolicon/32x32/point_intersectxy_icon.png</iconset>
    </property>
    <property name="text">
@@ -3202,7 +3228,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/height.png</normaloff>:/toolicon/32x32/height.png</iconset>
    </property>
    <property name="text">
@@ -3220,7 +3246,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/line_intersect_axis.png</normaloff>:/toolicon/32x32/line_intersect_axis.png</iconset>
    </property>
    <property name="text">
@@ -3238,7 +3264,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/intersect.png</normaloff>:/toolicon/32x32/intersect.png</iconset>
    </property>
    <property name="text">
@@ -3256,7 +3282,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/spline.png</normaloff>:/toolicon/32x32/spline.png</iconset>
    </property>
    <property name="text">
@@ -3274,7 +3300,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/spline_cut_point.png</normaloff>:/toolicon/32x32/spline_cut_point.png</iconset>
    </property>
    <property name="text">
@@ -3292,7 +3318,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/cubic_bezier.png</normaloff>:/toolicon/32x32/cubic_bezier.png</iconset>
    </property>
    <property name="text">
@@ -3310,7 +3336,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/splinePath.png</normaloff>:/toolicon/32x32/splinePath.png</iconset>
    </property>
    <property name="text">
@@ -3328,7 +3354,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/splinePath_cut_point.png</normaloff>:/toolicon/32x32/splinePath_cut_point.png</iconset>
    </property>
    <property name="text">
@@ -3346,7 +3372,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/cubic_bezier_path.png</normaloff>:/toolicon/32x32/cubic_bezier_path.png</iconset>
    </property>
    <property name="text">
@@ -3364,7 +3390,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/intersection_curves.png</normaloff>:/toolicon/32x32/intersection_curves.png</iconset>
    </property>
    <property name="text">
@@ -3385,7 +3411,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/curve_intersect_axis.png</normaloff>:/toolicon/32x32/curve_intersect_axis.png</iconset>
    </property>
    <property name="text">
@@ -3406,7 +3432,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/arc.png</normaloff>:/toolicon/32x32/arc.png</iconset>
    </property>
    <property name="text">
@@ -3427,7 +3453,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/arc_cut.png</normaloff>:/toolicon/32x32/arc_cut.png</iconset>
    </property>
    <property name="text">
@@ -3445,7 +3471,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/arc_intersect_axis.png</normaloff>:/toolicon/32x32/arc_intersect_axis.png</iconset>
    </property>
    <property name="text">
@@ -3463,7 +3489,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/point_of_intersection_arcs.png</normaloff>:/toolicon/32x32/point_of_intersection_arcs.png</iconset>
    </property>
    <property name="text">
@@ -3481,7 +3507,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/point_of_intersection_circles.png</normaloff>:/toolicon/32x32/point_of_intersection_circles.png</iconset>
    </property>
    <property name="text">
@@ -3499,7 +3525,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/point_from_circle_and_tangent.png</normaloff>:/toolicon/32x32/point_from_circle_and_tangent.png</iconset>
    </property>
    <property name="text">
@@ -3517,7 +3543,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/point_from_arc_and_tangent.png</normaloff>:/toolicon/32x32/point_from_arc_and_tangent.png</iconset>
    </property>
    <property name="text">
@@ -3535,7 +3561,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/arc_with_length.png</normaloff>:/toolicon/32x32/arc_with_length.png</iconset>
    </property>
    <property name="text">
@@ -3670,8 +3696,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="zoom-original">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="zoom-original"/>
    </property>
    <property name="text">
     <string>Original zoom</string>
@@ -3743,8 +3768,7 @@
   </action>
   <action name="wiki_Action">
    <property name="icon">
-    <iconset theme="help-contents">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="help-contents"/>
    </property>
    <property name="text">
     <string>Wiki</string>
@@ -3817,8 +3841,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-print">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-print"/>
    </property>
    <property name="text">
     <string>Print</string>
@@ -3835,8 +3858,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-print">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-print"/>
    </property>
    <property name="text">
     <string>Print tiled PDF</string>
@@ -3853,8 +3875,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-print-preview">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-print-preview"/>
    </property>
    <property name="text">
     <string>Print preview</string>
@@ -3871,8 +3892,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset theme="document-print-preview">
-     <normaloff>.</normaloff>.</iconset>
+    <iconset theme="document-print-preview"/>
    </property>
    <property name="text">
     <string>Preview tiled PDF</string>
@@ -3889,7 +3909,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/export.png</normaloff>:/toolicon/32x32/export.png</iconset>
    </property>
    <property name="text">
@@ -4154,7 +4174,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/points_toolbox.png</normaloff>:/toolicon/32x32/points_toolbox.png</iconset>
    </property>
    <property name="text">
@@ -4169,7 +4189,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/lines_toolbox.png</normaloff>:/toolicon/32x32/lines_toolbox.png</iconset>
    </property>
    <property name="text">
@@ -4184,7 +4204,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/line.png</normaloff>:/toolicon/32x32/line.png</iconset>
    </property>
    <property name="text">
@@ -4202,7 +4222,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/spline_toolboxs.png</normaloff>:/toolicon/32x32/spline_toolboxs.png</iconset>
    </property>
    <property name="text">
@@ -4217,7 +4237,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/arcs_toolbox.png</normaloff>:/toolicon/32x32/arcs_toolbox.png</iconset>
    </property>
    <property name="text">
@@ -4232,7 +4252,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/operations_toolbox.png</normaloff>:/toolicon/32x32/operations_toolbox.png</iconset>
    </property>
    <property name="text">
@@ -4247,7 +4267,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/layout_toolbox.png</normaloff>:/toolicon/32x32/layout_toolbox.png</iconset>
    </property>
    <property name="text">
@@ -4262,7 +4282,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/patternpiece_toolbox.png</normaloff>:/toolicon/32x32/patternpiece_toolbox.png</iconset>
    </property>
    <property name="text">
@@ -4277,7 +4297,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/new_piece@2x.png</normaloff>:/toolicon/32x32/new_piece@2x.png</iconset>
    </property>
    <property name="text">
@@ -4295,7 +4315,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/layout_settings.png</normaloff>:/toolicon/32x32/layout_settings.png</iconset>
    </property>
    <property name="text">
@@ -4313,7 +4333,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/export.png</normaloff>:/toolicon/32x32/export.png</iconset>
    </property>
    <property name="text">
@@ -4349,7 +4369,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/path.png</normaloff>:/toolicon/32x32/path.png</iconset>
    </property>
    <property name="text">
@@ -4367,7 +4387,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/insert_nodes_icon.png</normaloff>:/toolicon/32x32/insert_nodes_icon.png</iconset>
    </property>
    <property name="text">
@@ -4382,7 +4402,7 @@
   </action>
   <action name="union_Action">
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/union.png</normaloff>:/toolicon/32x32/union.png</iconset>
    </property>
    <property name="text">
@@ -4400,7 +4420,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/export.png</normaloff>:/toolicon/32x32/export.png</iconset>
    </property>
    <property name="text">
@@ -4418,7 +4438,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/details_toolbox.png</normaloff>:/toolicon/32x32/details_toolbox.png</iconset>
    </property>
    <property name="text">
@@ -4628,7 +4648,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/export.png</normaloff>:/toolicon/32x32/export.png</iconset>
    </property>
    <property name="text">
@@ -4651,7 +4671,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="share/resources/toolicon.qrc">
+    <iconset>
      <normaloff>:/toolicon/32x32/image_menu_icon.png</normaloff>:/toolicon/32x32/image_menu_icon.png</iconset>
    </property>
    <property name="text">
@@ -4792,7 +4812,6 @@
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="share/resources/toolicon.qrc"/>
   <include location="../../libs/vmisc/share/resources/theme.qrc"/>
   <include location="../../libs/vmisc/share/resources/icon.qrc"/>
  </resources>

@@ -1224,7 +1224,7 @@ void PatternPieceDialog::notchChanged(int index)
             ui->castleNotch_RadioButton->setEnabled(true);
             ui->diamondNotch_RadioButton->setEnabled(true);
 
-            ui->notchAngle_DoubleSpinBox->setEnabled(false);
+            // ui->notchAngle_DoubleSpinBox->setEnabled(false);
 
             switch(node.getNotchType())
             {
@@ -1493,7 +1493,7 @@ void PatternPieceDialog::notchTypeChanged(int id)
         QListWidgetItem *rowItem = getItemById(ui->notches_ComboBox->currentData().toUInt());
         if (rowItem)
         {
-            ui->notchAngle_DoubleSpinBox->setEnabled(false);
+            // ui->notchAngle_DoubleSpinBox->setEnabled(false);
             ui->notchAngle_DoubleSpinBox->setValue(0.0);
 
             VPieceNode rowNode = qvariant_cast<VPieceNode>(rowItem->data(Qt::UserRole));

@@ -44,7 +44,7 @@
       <widget class="QLabel" name="xpos_Label">
        <property name="minimumSize">
         <size>
-         <width>30</width>
+         <width>20</width>
          <height>20</height>
         </size>
        </property>
@@ -60,7 +60,7 @@
         </font>
        </property>
        <property name="text">
-        <string> XPos:</string>
+        <string>Y:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -117,7 +117,7 @@
         </font>
        </property>
        <property name="text">
-        <string>YPos:</string>
+        <string>Y:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -158,13 +158,13 @@
       <widget class="QLabel" name="units_Label">
        <property name="minimumSize">
         <size>
-         <width>30</width>
+         <width>40</width>
          <height>20</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>30</width>
+         <width>40</width>
          <height>20</height>
         </size>
        </property>
@@ -185,13 +185,13 @@
       <widget class="QLabel" name="unitsText_Label">
        <property name="minimumSize">
         <size>
-         <width>30</width>
+         <width>40</width>
          <height>20</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>30</width>
+         <width>40</width>
          <height>20</height>
         </size>
        </property>

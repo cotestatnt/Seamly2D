@@ -1323,9 +1323,12 @@ void MainWindowsNoGUI::PrintPreview()
 
     SetPrinterSettings(printer.data(), PrintType::PrintPreview);
     printer->setResolution(static_cast<int>(PrintDPI));
+
     // display print preview dialog
     QPrintPreviewDialog preview(printer.data());
+    preview.setWindowFlags(Qt::Window);
     connect(&preview, &QPrintPreviewDialog::paintRequested, this, &MainWindowsNoGUI::PrintPages);
+    preview.showMaximized();
     preview.exec();
 }
 

@@ -2061,7 +2061,8 @@ void MainWindow::LoadIndividual()
         usedNotExistedDir = directory.mkpath(".");
     }
 
-    const QString filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, nullptr,
+    QFileDialog::Options options;
+    const QString filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, options,
                                         QFileDialog::ExistingFile, QFileDialog::AcceptOpen);
 
 
@@ -2107,7 +2108,8 @@ void MainWindow::LoadMultisize()
     QString dir = qApp->Seamly2DSettings()->getMultisizePath();
     dir = VCommonSettings::prepareMultisizeTables(dir);
 
-    const QString filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, nullptr,
+    QFileDialog::Options options;
+    const QString filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, options,
                                         QFileDialog::ExistingFile, QFileDialog::AcceptOpen);
 
     if (!filename.isEmpty())
@@ -2750,6 +2752,8 @@ void MainWindow::zoomScaleChanged(qreal scale)
     zoomScaleSpinBox->setValue(qFloor(scale*1000)/10.0);
     zoomScaleSpinBox->blockSignals(false);
     qCDebug(vMainWindow, "Value %f\n", (qreal(qFloor(scale*1000)/10.0)));
+
+    ui->zoomToArea_Action->setChecked(false);
 }
 
 //---------------------------------------------------------------------------------------------------------------------
@@ -2939,6 +2943,8 @@ void MainWindow::initializeToolButtons()
     connect(ui->anchorPoint_ToolButton,    &QToolButton::clicked, this, &MainWindow::handleAnchorPointTool);
     connect(ui->importImage_ToolButton,    &QToolButton::clicked, this, &MainWindow::handleImageTool);
     connect(ui->insertNodes_ToolButton,    &QToolButton::clicked, this, &MainWindow::handleInsertNodesTool);
+
+    connect(ui->printPreview_toolButton,    &QToolButton::clicked, this, &MainWindow::PrintPreviewTiled);
 }
 
 void MainWindow::handlePointsMenu()
@@ -2953,7 +2959,7 @@ void MainWindow::handlePointsMenu()
     QAction *action_AlongPerpendicular  = menu.addAction(QIcon(":/toolicon/32x32/normal.png"),                 tr("On Perpendicular") + "\tO, P");
     QAction *action_Bisector            = menu.addAction(QIcon(":/toolicon/32x32/bisector.png"),               tr("On Bisector") + "\tO, B");
     QAction *action_Shoulder            = menu.addAction(QIcon(":/toolicon/32x32/shoulder.png"),               tr("Length to Line") + "\tP, S");
-    QAction *action_PointOfContact      = menu.addAction(QIcon(":/toolicon/32x32/point_intersect_arc_line.png"),       tr("Intersect Arc and Line") + "\tA, L");
+    QAction *action_PointOfContact      = menu.addAction(QIcon(":/toolicon/32x32/point_intersect_arc_line.png"), tr("Intersect Arc and Line") + "\tA, L");
     QAction *action_Triangle            = menu.addAction(QIcon(":/toolicon/32x32/triangle.png"),               tr("Intersect Axis and Triangle") + "\tX, T");
     QAction *action_PointIntersectXY    = menu.addAction(QIcon(":/toolicon/32x32/point_intersectxy_icon.png"), tr("Intersect XY") + "\tX, Y");
     QAction *action_PerpendicularPoint  = menu.addAction(QIcon(":/toolicon/32x32/height.png"),                 tr("Intersect Line and Perpendicular") + "\tL, P");
@@ -3350,7 +3356,6 @@ void MainWindow::handlePatternPiecesMenu()
 void MainWindow::handleLayoutMenu()
 {
     qCDebug(vMainWindow, "Layout Menu selected. \n");
-
 
     QMenu menu;
 
@@ -4102,9 +4107,10 @@ bool MainWindow::SaveAs()
         usedNotExistedDir = directory.mkpath(".");
     }
 
+    QFileDialog::Options options;
     fileName = fileDialog(this, tr("Save as"),
                                         dir + QLatin1String("/") + fileName + QLatin1String(".") + sm2dExt,
-                                        filters, nullptr, nullptr, QFileDialog::AnyFile,
+                                        filters, nullptr, options, QFileDialog::AnyFile,
                                         QFileDialog::AcceptSave);
 
     if (fileName.isEmpty())
@@ -4291,7 +4297,8 @@ void MainWindow::Open()
     }
     qCDebug(vMainWindow, "Run QFileDialog::getOpenFileName: dir = %s.", qUtf8Printable(dir));
 
-    const QString filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, nullptr,
+    QFileDialog::Options options;
+    const QString filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, options,
                                         QFileDialog::ExistingFile, QFileDialog::AcceptOpen);
 
     if (filename.isEmpty())
@@ -7077,7 +7084,8 @@ QString MainWindow::checkPathToMeasurements(const QString &patternPath, const QS
                     //Use standard path to multisize measurements
                     QString dir = qApp->Seamly2DSettings()->getMultisizePath();
                     dir = VCommonSettings::prepareMultisizeTables(dir);
-                    filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, nullptr,
+                    QFileDialog::Options options;
+                    filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, options,
                                           QFileDialog::ExistingFile, QFileDialog::AcceptOpen);
 
                 }
@@ -7096,8 +7104,8 @@ QString MainWindow::checkPathToMeasurements(const QString &patternPath, const QS
                     {
                         usedNotExistedDir = directory.mkpath(".");
                     }
-
-                    filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, nullptr,
+                    QFileDialog::Options options;
+                    filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, options,
                                           QFileDialog::ExistingFile, QFileDialog::AcceptOpen);
 
                     if (usedNotExistedDir)
@@ -7125,8 +7133,8 @@ QString MainWindow::checkPathToMeasurements(const QString &patternPath, const QS
                     {
                         usedNotExistedDir = directory.mkpath(".");
                     }
-
-                    filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, nullptr,
+                    QFileDialog::Options options;
+                    filename = fileDialog(this, tr("Open file"), dir, filter, nullptr, options,
                                           QFileDialog::ExistingFile, QFileDialog::AcceptOpen);
 
                     if (usedNotExistedDir)
