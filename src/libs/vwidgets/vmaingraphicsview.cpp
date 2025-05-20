@@ -632,6 +632,17 @@ void VMainGraphicsView::mousePressEvent(QMouseEvent *event)
 {
     switch (event->button())
     {
+        case Qt::RightButton:  // Nuovo caso per il Pan con il tasto destro
+        {
+            if (QApplication::keyboardModifiers() == Qt::ControlModifier)
+            {
+                isPanDragActive = true;
+                m_startPos = event->pos();
+                viewport()->setCursor(Qt::ClosedHandCursor);
+                event->accept();
+            }
+            break;
+        }
         case Qt::LeftButton:
         {
             if ( isZoomToAreaActive )
@@ -703,6 +714,7 @@ void VMainGraphicsView::mousePressEvent(QMouseEvent *event)
             viewport()->setCursor(Qt::ClosedHandCursor);
             break;
         }
+
         default:
             break;
     }
@@ -757,7 +769,7 @@ void VMainGraphicsView::mouseReleaseEvent(QMouseEvent *event)
     if ( isPanDragActive )
     {
         isPanDragActive = false;
-        viewport()->setCursor(Qt::OpenHandCursor);
+        viewport()->setCursor(Qt::ArrowCursor);
         qCDebug(vMainGraphicsView, "Stop Pan\n");
     }
     else if ( isRubberBandActive )

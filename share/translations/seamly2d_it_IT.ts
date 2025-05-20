@@ -5637,7 +5637,7 @@ Vuoi salvare i cambiamenti?</translation>
     </message>
     <message>
         <source>Seamly2D didn&apos;t shut down correctly. Do you want reopen files (%1) you had open?</source>
-        <translation>Seamly2D non si è chiuso correttamente. Vuoi riaprirei file (%1) che avevi aperto?</translation>
+        <translation type="unfinished">Seamly2D non si è chiuso correttamente. Vuoi riaprire tutti i file (%1) che avevi aperto?</translation>
     </message>
     <message>
         <source>Reopen files.</source>
@@ -5761,7 +5761,7 @@ Vuoi salvare i cambiamenti?</translation>
     </message>
     <message>
         <source>Couldn&apos;t unload measurements. Some of them are used in the pattern.</source>
-        <translation>Impossibile scaricare misure. Alcune di queste sono utilizzate nel cartamodello.</translation>
+        <translation type="unfinished">Impossibile scaricare misure. Alcune di queste sono utilizzate nel modello.</translation>
     </message>
     <message>
         <source>New pattern</source>
@@ -6393,7 +6393,7 @@ Vuoi salvare i cambiamenti?</translation>
     </message>
     <message>
         <source>New Pattern Piece</source>
-        <translation>Nuovo cartamodello</translation>
+        <translation>Nuovo modello</translation>
     </message>
     <message>
         <source>N, P</source>
@@ -6661,7 +6661,7 @@ Vuoi salvare i cambiamenti?</translation>
     </message>
     <message>
         <source>Export Pattern Pieces</source>
-        <translation>Esporta cartamodello</translation>
+        <translation type="unfinished">Esporta modello</translation>
     </message>
     <message>
         <source>Import Image</source>
@@ -6877,7 +6877,7 @@ Vuoi salvare i cambiamenti?</translation>
     </message>
     <message>
         <source>Add New Pattern Piece (N, P)</source>
-        <translation>Aggiungi Nuovo cartamodello (N, P)</translation>
+        <translation type="unfinished">Aggiungi Nuovo Modello (N, P)</translation>
     </message>
     <message>
         <source>Add Anchor Point (A, P)</source>
@@ -9903,7 +9903,7 @@ Premi Invio per aggiungerlo temporaneamente all&apos;elenco.</translation>
     <name>QObject</name>
     <message>
         <source>Create new pattern piece to start working.</source>
-        <translation>Crea nuovo pezzo di cartamodello per iniziare a lavorare.</translation>
+        <translation>Crea nuovo modello per iniziare a lavorare.</translation>
     </message>
     <message>
         <source>mm</source>
@@ -11590,7 +11590,7 @@ Vuoi salvare le tue modifiche?</translation>
     </message>
     <message>
         <source>Import from a pattern</source>
-        <translation>Importa dal cartamodello</translation>
+        <translation type="unfinished">Importa dal modello</translation>
     </message>
     <message>
         <source>Pattern unit:</source>
